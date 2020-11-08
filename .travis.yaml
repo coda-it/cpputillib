@@ -1,8 +1,0 @@
-language: cpp
-
-compiler:
-- g++
-
-install:
-- pip install conan
-- conan user
