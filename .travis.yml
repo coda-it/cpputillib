@@ -5,6 +5,7 @@ compiler:
 
 install:
 - pip install conan
+- make install
 
 before_script:
   - make lint
