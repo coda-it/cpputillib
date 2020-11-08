@@ -1,17 +1,8 @@
-os: linux
-language: python
-python: "3.7"
-dist: xenial
+language: cpp
+
 compiler:
-  - g++
+- g++
+
 install:
-  - pip install conan
-  - conan user
-script:
-# Download dependencies and build project
-  - conan install .
-# Call your build system
-  - cmake . -G "Unix Makefiles"
-  - cmake --build .
-# Run your tests
-  - ctest 
+- pip install conan
+- conan user
