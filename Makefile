@@ -7,13 +7,14 @@ install:
 
 .PHONY: test
 test: 
-	g++ -std=c++17 -I /System/Volumes/Data/Users/oszura/.conan/data/catch2/2.13.3/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/include/ test.cpp -o test
-	./test
-	rm test
+	g++ -std=c++17 -I $(HOME)/.conan/data/catch2/2.13.3/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/include/ tests.cpp -o tests
+	./tests
+	rm tests
 
 .PHONY: fix
 fix:
-	clang-format -i -style=file *.cpp *.h
+	clang-format -i -style=file *.cpp
+	clang-format -i -style=file include/*.h
 
 .PHONY: version
 version:
