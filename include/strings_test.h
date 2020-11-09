@@ -23,4 +23,12 @@ TEST_CASE("split") {
     REQUIRE(v[1] == "text about it.");
     REQUIRE(v.size() == 2);
   }
+
+  SECTION("should split for particular delimiter number") {
+    std::vector<std::string> v = coda::split("See a te xt", " ", 3);
+    REQUIRE(v[0] == "See");
+    REQUIRE(v[1] == "a");
+    REQUIRE(v[2] == "te xt");
+    REQUIRE(v.size() == 3);
+  }
 }

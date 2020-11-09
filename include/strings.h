@@ -1,4 +1,3 @@
-#include <iostream>
 #include <string>
 #include <vector>
 
@@ -19,7 +18,7 @@ std::vector<std::string> split(std::string text, std::string delimiter,
 
     start = end + 1;
 
-    if (number == -1 || (number != -1 && i == number - 1)) {
+    if (number == -1 || (number != -1 && i != number - 2)) {
       end = text.find(delimiter, end + 1);
     } else {
       end = text.length();
