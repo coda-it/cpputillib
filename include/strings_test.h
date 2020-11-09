@@ -3,7 +3,7 @@
 #include <vector>
 
 TEST_CASE("split") {
-  std::vector v = coda::split("Some text about it.", " ");
+  std::vector<std::string> v = coda::split("Some text about it.", " ");
   REQUIRE(v[0] == "Some");
   REQUIRE(v[1] == "text");
   REQUIRE(v[2] == "about");

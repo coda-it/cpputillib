@@ -5,4 +5,7 @@ compiler:
 
 install:
 - pip install conan
-- conan user
+- make install
+
+script:
+  - make test
