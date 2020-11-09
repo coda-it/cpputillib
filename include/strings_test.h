@@ -17,14 +17,20 @@ TEST_CASE("split") {
     REQUIRE(v.size() == 1);
   }
 
-  SECTION("should split for particular delimiter number") {
+  SECTION("should split for 1 delimiter") {
+    std::vector<std::string> v = coda::split("Some text about it.", " ", 1);
+    REQUIRE(v[0] == "Some");
+    REQUIRE(v.size() == 1);
+  }
+
+  SECTION("should split for 2 delimiters") {
     std::vector<std::string> v = coda::split("Some text about it.", " ", 2);
     REQUIRE(v[0] == "Some");
     REQUIRE(v[1] == "text about it.");
     REQUIRE(v.size() == 2);
   }
 
-  SECTION("should split for particular delimiter number") {
+  SECTION("should split for 3 delimiters and ignore last delimiter") {
     std::vector<std::string> v = coda::split("See a te xt", " ", 3);
     REQUIRE(v[0] == "See");
     REQUIRE(v[1] == "a");
