@@ -1,6 +1,9 @@
 #include <string>
 #include <vector>
 
+#ifndef CODA_STRINGS_H
+#define CODA_STRINGS_H
+
 namespace coda {
 std::vector<std::string> split(std::string text, std::string delimiter,
                                int number = -1) {
@@ -30,3 +33,5 @@ std::vector<std::string> split(std::string text, std::string delimiter,
   return split;
 }
 } // namespace coda
+
+#endif /* CODA_STRINGS_H */
